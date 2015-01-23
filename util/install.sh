@@ -76,7 +76,7 @@ echo "Detected Linux distribution: $DIST $RELEASE $CODENAME $ARCH"
 KERNEL_NAME=`uname -r`
 KERNEL_HEADERS=kernel-headers-${KERNEL_NAME}
 
-if ! echo $DIST | egrep 'Ubuntu|Debian|Fedora|CentOS'; then
+if ! echo $DIST | egrep 'Ubuntu|Debian|Fedora|CentOS'; then		#todo
     echo "Install.sh currently only supports Ubuntu, Debian and Fedora and CentOS only for testing purpose."
     exit 1
 fi
