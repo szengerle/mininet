@@ -114,9 +114,9 @@ function kernel {
 
     if echo $DIST | egrep 'Ubuntu|Debian'; then     
         sudo apt-get update
+	$install linux-image-$KERNEL_NAME
     fi
 
-    $install linux-image-$KERNEL_NAME
 }
 
 function kernel_clean {
