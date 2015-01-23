@@ -111,7 +111,11 @@ OF13_SWITCH_REV=${OF13_SWITCH_REV:-""}
 
 function kernel {
     echo "Install Mininet-compatible kernel if necessary"
-    sudo apt-get update
+
+    if echo $DIST | egrep 'Ubuntu|Debian'; then     
+        sudo apt-get update
+    fi
+
     $install linux-image-$KERNEL_NAME
 }
 
